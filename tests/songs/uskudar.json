@@ -1,0 +1,30 @@
+{
+ "title": "Üsküdar'a Gider İken",
+ "artist": "Anonim (geleneksel türkü, 19. yy.)",
+ "note": "Traditional anonymous Turkish folk song; lyrics in the public domain. Sung here by espeak-ng over a synthesized band, so the recording is ours too.",
+ "sections": [
+  {"name": "kıta 1", "gap_before": 6.0, "echo": false, "lines": [
+   "Üsküdar'a gider iken aldı da bir yağmur",
+   "Kâtibimin setresi uzun eteği çamur",
+   "Kâtip uykudan uyanmış gözleri mahmur"]},
+  {"name": "nakarat", "gap_before": 0.0, "echo": true, "lines": [
+   "Kâtip benim ben kâtibin el ne karışır",
+   "Kâtibime kolalı da gömlek ne güzel yaraşır"]},
+  {"name": "kıta 2", "gap_before": 7.0, "echo": false, "lines": [
+   "Üsküdar'a gider iken bir mendil buldum",
+   "Mendilimin içine de lokum doldurdum",
+   "Kâtibimi arar iken yanımda buldum"]},
+  {"name": "nakarat", "gap_before": 0.0, "echo": true, "lines": [
+   "Kâtip benim ben kâtibin el ne karışır",
+   "Kâtibime kolalı da gömlek ne güzel yaraşır"]}
+ ],
+ "asr_mistakes": {
+  "Üsküdar'a": "üsküdara",
+  "setresi": "sitresi",
+  "mahmur": "mahmut",
+  "kâtibin": "katibin",
+  "yaraşır": "yara şır",
+  "lokum": null,
+  "mendil": "mendir"
+ }
+}

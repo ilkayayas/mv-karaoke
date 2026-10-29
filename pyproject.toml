@@ -1,0 +1,36 @@
+[project]
+name = "mv-karaoke"
+version = "0.1.0"
+description = "Turn a music video into a karaoke video: keep the original picture, remove the vocals, overlay word-synced lyrics."
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "İlkay Ayas", email = "ilkayayas@gmail.com" }]
+dependencies = [
+  "numpy",
+  "scipy",
+  "soundfile",
+  "pillow",
+  "yt-dlp",
+]
+
+[project.optional-dependencies]
+# all vocals removed
+demucs = ["demucs>=4.1"]
+# lead vocal only (MelBand-RoFormer karaoke models). Apple Silicon needs a recent PyTorch.
+# audio-separator imports audioread without declaring it, and librosa 1.0 dropped it;
+# pinned to the librosa line it was tested with.
+karaoke = ["audio-separator[cpu]>=0.47", "librosa>=0.10,<1.0", "audioread"]
+# word timing from the isolated vocal
+align-mac = ["stable-ts[mlx]>=2.19"]
+align = ["stable-ts[fw]>=2.19"]
+dev = ["pytest"]
+
+[project.scripts]
+mv-karaoke = "mv_karaoke.cli:main"
+mv-karaoke-sync = "mv_karaoke.sync_cli:main"
+
+[tool.setuptools]
+packages = ["mv_karaoke"]
+
+[tool.setuptools.package-data]
+mv_karaoke = ["fonts/*"]
